@@ -68,8 +68,9 @@ jobs:
       
     - name: SonarQube Scan
       uses: SonarSource/sonarcloud-github-action@v1
+      env:
+        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
       with:
-       token: ${{ secrets.SONAR_TOKEN }}
        projectBaseDir: './'
        args: '-Dsonar.sources=src -Dsonar.tests=test -Dsonar.java.binaries=target/classes'
 
