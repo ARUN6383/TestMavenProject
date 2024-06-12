@@ -59,11 +59,9 @@ jobs:
           name: maven-artifacts
           path: target
 
-    
-   
-   - name: Download Maven artifacts
-     uses: actions/download-artifact@v2
-     with:
+    - name: Download Maven artifacts
+      uses: actions/download-artifact@v2
+      with:
           name: maven-artifacts
 
 
